@@ -1,0 +1,40 @@
+{
+  "target_url": "https://education.maximumtest.ru/student/courses",
+  "profiles_dir": "%LOCALAPPDATA%/LeaderIdMultiLogin/profiles",
+  "browser_binary": "",
+  "driver_path": "",
+  "headless": false,
+  "tile_windows": true,
+  "window_margin": 8,
+  "typing_delay": 0.01,
+  "refresh_before_login": 2,
+  "refresh_delay": 2.0,
+  "start_timeout": 180,
+  "login_timeout": 180,
+  "captcha_timeout": 300,
+  "page_load_timeout": 90,
+  "keep_open": true,
+  "accounts": [
+    {
+      "name": "Аккаунт 1",
+      "email": "denfox3105@gmail.com",
+      "password": "Ltytxrf_31",
+      "profile": "account1",
+      "enabled": true
+    },
+    {
+      "name": "Аккаунт 2",
+      "email": "",
+      "password": "",
+      "profile": "account2",
+      "enabled": true
+    },
+    {
+      "name": "Аккаунт 3",
+      "email": "",
+      "password": "",
+      "profile": "account3",
+      "enabled": true
+    }
+  ]
+}
