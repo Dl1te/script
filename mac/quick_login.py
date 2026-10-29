@@ -62,7 +62,7 @@ DEFAULTS = {
     "keep_open": True,
     "browser_binary": "",
     "driver_path": "",
-    "profiles_dir": "%LOCALAPPDATA%/LeaderIdMultiLogin/profiles",
+    "profiles_dir": "~/Library/Application Support/LeaderIdMultiLogin/profiles",
 }
 
 
@@ -1082,73 +1082,9 @@ def main() -> int:
     except Exception:
         pass
 
-    cfg = load_config(CONFIG_PATH)
-    accounts = parse_accounts(cfg)
-    if not accounts:
-        raise SystemExit(
-            "Нет готовых аккаунтов. Заполните email/password в config.json."
-        )
+    from pipeline import run
 
-    total = len(accounts)
-    print("=" * 68)
-    print("Быстрый вход: все аккаунты одновременно в разных окнах")
-    print(f"Цель: {cfg['target_url']}")
-    print(f"Аккаунтов: {total}")
-    for number, account in enumerate(accounts, start=1):
-        print(f"  {number}. {account.name} <{account.email}>")
-        print(f"     профиль: {account.profile}")
-    print("=" * 68)
-
-    driver_path = resolve_driver_path(cfg)
-    if driver_path:
-        log("driver", f"ChromeDriver: {driver_path}")
-    else:
-        log("driver", "ChromeDriver не найден заранее — Selenium Manager попробует сам.")
-
-    threads: list[threading.Thread] = []
-    for index, account in enumerate(accounts):
-        thread = threading.Thread(
-            target=quick_login_account,
-            args=(account, cfg, index, total, driver_path),
-            name=f"quick-{index + 1}",
-            daemon=True,
-        )
-        threads.append(thread)
-        thread.start()
-        time.sleep(0.8)
-
-    try:
-        for thread in threads:
-            thread.join()
-    except KeyboardInterrupt:
-        print("\nПрервано пользователем.")
-
-    if DRIVERS and cfg.get("keep_open", True):
-        print("\n" + "=" * 68)
-        print("Окна оставлены открытыми. Можно работать в них вручную.")
-        print("Нажмите Enter здесь, чтобы закрыть все окна.")
-        print("=" * 68)
-        try:
-            input()
-        except (EOFError, KeyboardInterrupt, RuntimeError):
-            print(
-                "Консольный ввод недоступен — окна останутся открытыми, "
-                "пока вы не закроете их сами."
-            )
-            try:
-                while any(browser_alive(driver) for _name, driver in DRIVERS):
-                    time.sleep(1.0)
-            except KeyboardInterrupt:
-                pass
-
-    with DRIVERS_LOCK:
-        for _name, driver in DRIVERS:
-            try:
-                driver.quit()
-            except Exception:
-                pass
-    print("Все окна закрыты.")
-    return 0
+    return run(do_homework=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,60 @@
+{
+  "target_url": "https://education.maximumtest.ru/student/courses",
+  "profiles_dir": "~/Library/Application Support/LeaderIdMultiLogin/profiles",
+  "homework": {
+    "enabled": true,
+    "auto_discover": true,
+    "lessons": [
+      "https://education.maximumtest.ru/lesson/4916353/subjects/65737/practice/kbs/14293/tests/346682?backPage=/student/courses/113493/lessons&type=online"
+    ],
+    "submit": true,
+    "skip_completed": true,
+    "timeout": 45,
+    "submit_timeout": 40
+  },
+  "login_attempts": 1,
+
+  "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "driver_path": "",
+  "headless": false,
+  "tile_windows": true,
+  "window_margin": 8,
+  "typing_delay": 0.01,
+  "refresh_before_login": 2,
+  "refresh_delay": 2.0,
+  "start_timeout": 180,
+  "login_timeout": 180,
+  "captcha_timeout": 300,
+  "page_load_timeout": 90,
+  "keep_open": true,
+  "accounts": [
+    {
+      "name": "Аккаунт 1",
+      "email": "dashagpt517@gmail.com",
+      "password": "RL5sLNe9PUUrov8",
+      "profile": "Nesterova",
+      "enabled": true
+    },
+    {
+      "name": "Аккаунт 2",
+      "email": "mubinhonmuhamadiev@gmail.com",
+      "password": "WYHrpVH9NFKL-BN",
+      "profile": "Mubin",
+      "enabled": true
+    },
+    {
+      "name": "Аккаунт 3",
+      "email": "artemosmakov7@gmail.com",
+      "password": "fYIwklP5D3TQzqW",
+      "profile": "Asmakov",
+      "enabled": true
+    },
+    {
+      "name": "Аккаунт 4",
+      "email": "feoktistov.1901@mail.ru ",
+      "password": "MC3cjBL2o8rtrKX",
+      "profile": "feoktistov",
+      "enabled": true
+    }
+  ]
+}
