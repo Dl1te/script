@@ -17,8 +17,8 @@
   "accounts": [
     {
       "name": "Аккаунт 1",
-      "email": "denfox3105@gmail.com",
-      "password": "Ltytxrf_31",
+      "email": "",
+      "password": "",
       "profile": "account1",
       "enabled": true
     },
