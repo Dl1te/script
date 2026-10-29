@@ -30,30 +30,30 @@
   "accounts": [
     {
       "name": "Аккаунт 1",
-      "email": "dashagpt517@gmail.com",
-      "password": "RL5sLNe9PUUrov8",
-      "profile": "Nesterova",
+      "email": "",
+      "password": "",
+      "profile": "",
       "enabled": false
     },
     {
       "name": "Аккаунт 2",
-      "email": "mubinhonmuhamadiev@gmail.com",
-      "password": "WYHrpVH9NFKL-BN",
-      "profile": "Mubin",
+      "email": "",
+      "password": "",
+      "profile": "",
       "enabled": true
     },
     {
       "name": "Аккаунт 3",
-      "email": "artemosmakov7@gmail.com",
-      "password": "fYIwklP5D3TQzqW",
-      "profile": "Asmakov",
+      "email": "",
+      "password": "",
+      "profile": "",
       "enabled": true
     },
     {
       "name": "Аккаунт 4",
-      "email": "feoktistov.1901@mail.ru ",
-      "password": "MC3cjBL2o8rtrKX",
-      "profile": "feoktistov",
+      "email": "",
+      "password": "",
+      "profile": "",
       "enabled": true
     }
   ]
